@@ -7,7 +7,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.3');
-  api.use('fourseven:scss@1.0.0');
+  api.use('fourseven:scss@3.1.1');
   api.addFiles([
     // Helpers
     "neat/_neat-helpers.scss",
