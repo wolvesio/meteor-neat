@@ -12,7 +12,7 @@
 
 #### [Changelog](https://github.com/thoughtbot/neat/releases)
 
-##Install
+## Install
 
 1. Make sure to add sass support to your meteor app:
 
@@ -32,42 +32,19 @@
   meteor add wolves:neat
   ```
 
-4. Create a `scss.json` configuration file in the app's root with:
-
-  ```json
-  {
-    "includePaths": [
-    ".meteor/local/build/programs/server/assets/packages/wolves_bourbon",
-    ".meteor/local/build/programs/server/assets/packages/wolves_neat"
-    ]
-  }
-  ```
-
-  **Example of scss.json using full bourbon suite**
-  *(This would be used after installing the `wolves:bitters` & `wolves:neat` packages along with bourbon)*
-  ```json
-  {
-    "includePaths": [
-      ".meteor/local/build/programs/server/assets/packages/wolves_bourbon",
-      ".meteor/local/build/programs/server/assets/packages/wolves_bitters",
-      ".meteor/local/build/programs/server/assets/packages/wolves_neat"
-    ]
-  }
-  ```
-
-##Usage
+## Usage
 
 1. Simply import Bourbon at the top of your sass file, then import neat directly after it
 
   `*.scss`
   ```scss
-  @import "bourbon/bourbon";
-  @import "neat/neat";
+  @import "{wolves:bourbon}/bourbon";
+  @import "{wolves:neat}/neat";
   ```
   `*.sass`
   ```sass
-  @import bourbon/bourbon
-  @import neat/neat
+  @import {wolves:bourbon}/bourbon
+  @import {wolves:neat}/neat
   ```
 
 ---
@@ -85,15 +62,15 @@ More information can be found in the [wiki](https://github.com/thoughtbot/neat/w
 First off, if you are planning to override the default grid settings (12 columns), it is recommended to create a `_grid-settings.scss` file for that purpose. Make sure to import it right *before* importing Neat:
 
 ```scss
-@import "bourbon/bourbon";
+@import "{wolves:bourbon}/bourbon";
 @import "grid-settings";
-@import "neat/neat";
+@import "{wolves:neat}/neat";
 ```
 
-In your newly created  `_grid-settings.scss`, import `neat/neat-helpers` if you are planning to use `new-breakpoint()`, then define your new variables:
+In your newly created  `_grid-settings.scss`, import `{wolves:neat}/neat-helpers` if you are planning to use `new-breakpoint()`, then define your new variables:
 
 ```scss
-@import "neat/neat-helpers";
+@import "{wolves:neat}/neat-helpers";
 
 // Change the grid settings
 $column: 90px;

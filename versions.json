@@ -2,11 +2,11 @@
   "dependencies": [
     [
       "fourseven:scss",
-      "3.2.0"
+      "3.4.0-beta1"
     ],
     [
       "wolves:bourbon",
-      "3.0.0"
+      "3.1.0"
     ]
     [
       "meteor",
